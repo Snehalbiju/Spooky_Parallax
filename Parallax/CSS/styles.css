@@ -1,0 +1,154 @@
+body {
+    overflow-x: hidden;
+    text-shadow: 4px 4px 4px #aaa;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/bgimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+
+.spider{
+    top: -200px;
+}
+
+.third {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(../images/grass-grass-png-black-halloween.png);
+    background-repeat: repeat-x;
+    background-color: #1C2C0E;
+    background-size: inherit;
+    background-attachment: fixed;
+    background-position: bottom;
+    overflow: hidden;
+    animation: parallax_fg 20s linear infinite both;
+}
+
+#hand {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-top: 600px;
+}
+
+#halloween {
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    margin-top: 200px;
+}
+
+#flying_witch {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    animation: flyingwitch ease-out 10s infinite both;
+}
+
+@keyframes flyingwitch {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+#text {
+    position: absolute;
+    color: bisque;
+    z-index: 1;
+    text-shadow: 4px 4px 4px darkslategrey;
+}
+
+.parallax img {
+    top: 0;
+    left: 0;
+    width: inherit;
+    pointer-events: none;
+}
+
+.parallax img#bat {
+    position: absolute;
+    height: 200px;
+    transform: translateX(-100px);
+}
+
+.parallax img#tree {
+    height: inherit;
+    transform: translateY(200px);
+}
+
+.parallax img#witch {
+    height: 200px;
+    transform: translateX(-100px);
+}
+
+.sec {
+    position: relative;
+    height: 100vh;
+    background: url(../images/halloween-scary.webp);
+    background-color: #2C110F;
+    background-repeat: repeat-x;
+    background-size: contain;
+    animation: parallax_fg linear 20s infinite both;
+}
+
+.sec .frame{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+@keyframes parallax_fg {
+    0% {
+        background-position: 2765px 100%;
+    }
+
+    100% {
+        background-position: 550px 100%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .parallax img#bat {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sec {
+        background: url(../images/halloween-scary.webp);
+        background-repeat: repeat-x;
+        background-size: contain;
+        background-color: #2C110F;
+    }
+    #halloween{
+        width: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .parallax img#bat {
+        width: 75px;
+        height: 75px;
+    }
+    .spider{
+        top: -200px;
+    }
+}
